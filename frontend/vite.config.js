@@ -7,15 +7,15 @@ export default defineConfig({
     rollupOptions: {
       external: ['react-router-dom']
     }
-  }
+  },  // Added comma here
   plugins: [react()],
-  server:{
+  server: {
     port: 3000,
-    proxy:{
-      '/api' :{
+    proxy: {
+      '/api': {
         target: "https://chatapp-backend-8ptr.onrender.com",
-      } 
-      
+      }
     }
   }
 })
+
