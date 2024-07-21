@@ -1,9 +1,10 @@
 import User from '../models/user.model.js';
 import bcrypt from "bcryptjs";
 import generateTokenAndSetCookie from '../utils/generateToken.js';
-
+import connectToMongoDB from '../db/connectToMongoDB.js';
 
 export const signup = async (req, res) => {
+  connectToMongoDB();
   try {
     const { fullName, username, password, confirmPassword, gender } = req.body;
 
@@ -52,6 +53,7 @@ export const signup = async (req, res) => {
 };
 
 export const login = async (req, res) => {
+  connectToMongoDB();
   try{
     const {username, password} = req.body;
     const user = await User.findOne({username});
