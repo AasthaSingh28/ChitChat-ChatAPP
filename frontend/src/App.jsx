@@ -1,6 +1,5 @@
 import {
   Navigate,
-  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
@@ -15,7 +14,7 @@ function App() {
   const { authUser } = useAuthContext();
   return (
     <div className="p-4 h-screen flex items-center justify-center">
-      <Router>
+      
         <Routes>
           <Route
             path="/"
@@ -30,7 +29,7 @@ function App() {
             element={authUser ? <Navigate to="/" /> : <Signup />}
           />
         </Routes>
-      </Router>
+    
       <Toaster />
     </div>
   );
