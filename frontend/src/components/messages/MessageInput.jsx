@@ -1,5 +1,5 @@
 import { IoMdSend } from "react-icons/io";
-import  { useState } from 'react'
+import  { useState } from 'react';
 import useSendMessage from "../../hooks/useSendMessage";
 
 

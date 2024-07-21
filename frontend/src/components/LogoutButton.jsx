@@ -1,5 +1,5 @@
 import { CiLogout } from "react-icons/ci";
-import React from 'react'
+import React from 'react';
 import useLogout from "../hooks/useLogout";
 
 
